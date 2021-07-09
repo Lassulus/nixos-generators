@@ -1,4 +1,4 @@
-{ config, lib, pkgs, modulesPath, ... }:
+{ config, lib, pkgs, modulesPath, files, ... }:
 {
   imports = [ ./raw.nix ];
 
@@ -13,5 +13,6 @@
     partitionTableType = "efi";
     diskSize = "auto";
     format = "raw";
+    contents = files;
   });
 }
